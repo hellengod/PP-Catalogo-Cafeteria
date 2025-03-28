@@ -18,10 +18,10 @@
 
 ## Tecnologias Utilizadas
 
-- **Front-end**: HTML, CSS, JavaScript
+- **Front-end**: HTML, CSS
 - **Back-end**: PHP
-- **Banco de Dados**: (Defina qual banco de dados você está utilizando, como MySQL ou SQLite)
-- **Geração de PDF**: (Se você usou alguma biblioteca como TCPDF ou FPDF, mencione aqui)
+- **Banco de Dados**: MYSql
+- **Geração de PDF**: DOMPDF
 
 ## Como Executar
 
