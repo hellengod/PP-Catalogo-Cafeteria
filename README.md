@@ -1,6 +1,6 @@
-# Café Catalog
+# Café Catalogo
 
-**Café Catalog** é uma aplicação web desenvolvida para gerenciar o catálogo de uma cafeteria, com funcionalidades voltadas tanto para funcionários (administradores) quanto para clientes. O projeto foi criado para treinar e melhorar as habilidades em front-end (HTML, CSS, JavaScript) e back-end (PHP).
+**Café Catalogo** é uma aplicação web desenvolvida para gerenciar o catálogo de uma cafeteria, com funcionalidades voltadas tanto para funcionários (administradores) quanto para clientes. O projeto foi criado para treinar e melhorar as habilidades em front-end (HTML, CSS, JavaScript) e back-end (PHP).
 
 ## Funcionalidades
 
