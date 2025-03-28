@@ -14,7 +14,7 @@
 ### Para Clientes:
 - Login com e-mail comum.
 - Visualização do catálogo de produtos.
-- Acesso a informações detalhadas de cada produto.
+- Acesso a informações de cada produto.
 
 ## Tecnologias Utilizadas
 
