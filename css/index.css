@@ -3,8 +3,8 @@ body {
 }
 
 main {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 170px;
+    margin-right: 170px;
 }
 
 header {
@@ -13,6 +13,86 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    margin-left: 17px;
+
+}
+
+label {
+    font-size: 38px;
+    color: #402D1D;
+    font-style: oblique;
+    font-weight: bold;
+    margin-left: 17px;
+
+}
+
+
+.container-produto {
+    background-color: white;
+    width: 550px;
+    margin: 10px;
+    display: grid;
+    padding: 10px;
+    grid-template-areas:
+        'img texto'
+        'img texto'
+        'preco preco';
+    border-radius: 15px;
+}
+
+.container-setins {
+    grid-area: preco;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setins{
+    display: flex;
+    gap: 15px;
+}
+
+.container-cafe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.texto-produto {
+    grid-area: texto;
+    width: 270px;
+}
+
+.preco-produto {
+    font-size: 20px;
+    color: #402D1D;
+    font-weight: bold;
+
+}
+
+.titulo-produto {
+    font-size: 25px;
+    color: #402D1D;
+    font-weight: bold;
+}
+
+.descricao-produto {
+    font-size: 20px;
+    color: #402D1D;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.container-foto {
+    grid-area: img;
+    width: 200px;
+    height: 200px;
+
 }
 
 #titulo-header {
@@ -42,7 +122,8 @@ header {
     text-align: center;
     font-size: 18px;
     border-radius: 10px;
-    border: 2px solid #402D1D; /* Cor e espessura da borda */
+    border: 2px solid #402D1D;
+    /* Cor e espessura da borda */
     font-weight: 800;
     align-self: flex-start;
     margin-top: 40px;
