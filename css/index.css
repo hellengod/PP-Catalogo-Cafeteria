@@ -1,108 +1,49 @@
 body {
-    background-color: #745e50;
+    background-color: #F2E6D0;
+}
+
+main {
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 header {
-    height: 100px;
-    background-color: #dbcfbc;
-}
-
-.cabecalho {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-}
-
-h2 {
-    font-family: "Gravitas One", sans-serif;
-    font-size: 34px;
-    color: #514138;
-
-}
-
-#titulo {
-    font-family: "Gravitas One", sans-serif;
-    font-size: 34px;
-    color: #ff948b;
-    padding: 30px;
-}
-
-a {
-    padding: 10px;
-    font-family: "Gravitas One", sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    color: #514138;
-}
-
-.container-img-logo {
-    display: flex;
-    height: 80px;
     align-items: center;
+    margin-bottom: 50px;
 }
 
-.logo {
-    height: 100px;
-    padding: 10px;
+#titulo-header {
+    font-style: oblique;
+    font-size: 44px;
 }
 
-.container-cafe-manha-titulo,
-.container-almoco-titulo,
-.container-bebidas-titulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.banner {
-    display: flex;
-    justify-content: center;
-    height: 300px;
-}
-
-.container-produto {
-    background-color: #fcd487;
+.header-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    border: solid #EBC181 2px;
-    overflow: hidden;
-    margin: 10px;
-    width: 300px;
-    height: auto;
-    font-family: "Poppins", sans-serif;
-
 }
 
-.container-produto img {
-    width: 350px;
-    height: 270px;
-    object-fit: cover;
-}
-
-.container-produto p {
-    margin: 10px 0;
+#link-header {
+    padding: 15px;
+    width: 150px;
     text-align: center;
-    color: #514138;
-}
-
-.container-produto p:nth-child(4) {
-    color: #9B8357;
     font-size: 18px;
-    font-weight: 600;
+    background-color: #402D1D;
+    color: white;
+    border-radius: 10px;
 }
 
-.container-produto p:nth-child(2) {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.container-cafe-manha-produtos,
-.container-almoco-produtos,
-.container-bebidas-produtos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.button-login {
+    color: #402D1D;
+    padding: 10px;
+    background-color: #F2E6D0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #402D1D; /* Cor e espessura da borda */
+    font-weight: 800;
+    align-self: flex-start;
+    margin-top: 40px;
 }
