@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café</title>
-    <link rel="stylesheet" href="css\index.css">
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             </div>
             <a class="button-login">Sair</a>
         </header>
-        <label>Lista de Produtos</label>
+        <label class="title-index">Lista de Produtos</label>
         <section>
             <div class="container-cafe">
                 <div class="container-produto">

@@ -17,7 +17,7 @@ header {
 
 }
 
-label {
+.title-index {
     font-size: 38px;
     color: #402D1D;
     font-style: oblique;
@@ -46,7 +46,8 @@ label {
     align-items: center;
     justify-content: space-between;
 }
-.setins{
+
+.setins {
     display: flex;
     gap: 15px;
 }
@@ -123,8 +124,122 @@ img {
     font-size: 18px;
     border-radius: 10px;
     border: 2px solid #402D1D;
-    /* Cor e espessura da borda */
     font-weight: 800;
     align-self: flex-start;
     margin-top: 40px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+
+}
+
+.form {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.input-img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+
+}
+
+.input-name {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+
+}
+
+.input-form-nome {
+    height: 35px;
+    border-radius: 10px;
+    border: 0.5px solid #ccc;
+}
+
+.input-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+
+}
+
+.input-form-desc {
+    height: 70px;
+    border-radius: 10px;
+    border: 0.5px solid #ccc;
+}
+
+.input-preco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+
+}
+
+.input-form-preco {
+    height: 35px;
+    border-radius: 10px;
+    border: 0.5px solid #ccc;
+}
+
+.label-form-preco {
+    color: #402D1D;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.label-form-nome {
+    color: #402D1D;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.label-form-desc {
+    color: #402D1D;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.label-form-img {
+    color: #402D1D;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.titulo-form {
+    margin-left: 40px;
+    color: #402D1D;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.input-envia {
+    margin-left: 40px;
+}
+
+.input-form-envia {
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    background-color: #402D1D;
+    color: white;
 }
