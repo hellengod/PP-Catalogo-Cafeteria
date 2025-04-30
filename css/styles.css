@@ -168,6 +168,14 @@ img {
 
 }
 
+.form-section-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+
+}
+
 .form-login {
     background-color: white;
     display: flex;
@@ -176,6 +184,28 @@ img {
     width: 400px;
     height: 400px;
     border-radius: 15px;
+}
+
+.form-cadastro {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.input-form-cadastro {
+    width: 90%;
+}
+
+.input-form-login {
+    width: 90%;
+}
+
+.input-form {
+    width: 90%;
 }
 
 .input-img {
