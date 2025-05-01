@@ -17,7 +17,7 @@
             <a class="button-login">Sair</a>
         </header>
 
-        <section class="form-section">
+        <section class="form-section">  
             <div class="form">
                 <form class="input-form">
                     <div class="input-container">
