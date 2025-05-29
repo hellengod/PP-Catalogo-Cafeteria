@@ -5,25 +5,36 @@ class Usuario
     private string $nome;
     private string $email;
     private string $password;
-
-    public function __construct($nome, $email, $senha)
+    private PDO $pdo;
+    public function __construct(PDO $pdo)
     {
-
+        $this->pdo = $pdo;
     }
 
-    public function getNome(): string
-    {
-        return $this->nome;
-    }
-
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
 
-    public function addUser(){
-
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 
+    public function setPassword(string $password): void
+    {
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    public function salvar(): bool
+    {
+        $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)";
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([
+            ':nome' => $this->nome,
+            ':email' => $this->email,
+            ':senha' => $this->password,
+        ]);
+    }
 
 }
