@@ -1,0 +1,15 @@
+{
+    "name": "hellenbianchini/sua-cafeteria-cat",
+    "autoload": {
+        "psr-4": {
+            "Hellenbianchini\\SuaCafeteriaCat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hellen Bianchini",
+            "email": "hellenbiangod@gmail.com"
+        }
+    ],
+    "require": {}
+}
