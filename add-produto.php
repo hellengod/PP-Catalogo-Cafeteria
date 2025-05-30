@@ -19,7 +19,7 @@
 
         <section class="form-section">  
             <div class="form">
-                <form class="input-form">
+                <form class="input-form" action="/novo-produto.php" method="post">
                     <div class="input-container">
                         <h2 class="titulo-form">Adicionar Produto</h2>
 
@@ -29,7 +29,7 @@
                         </div>
                         <div class="input-desc">
                             <label class="label-form-desc" for="image">Descricao</label>
-                            <input class="input-form-desc" type="text">
+                            <input class="input-form-desc" name="descricao" type="text">
                         </div>
                         <div class="input-preco">
                             <label class="label-form-preco" for="preco">Preco</label>
