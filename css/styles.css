@@ -26,6 +26,15 @@ header {
 
 }
 
+#link-header {
+    text-decoration: none;
+
+}
+
+.icon-edit {
+    text-decoration: none;
+    color: black;
+}
 
 .container-produto {
     background-color: white;
