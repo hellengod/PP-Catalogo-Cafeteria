@@ -1,132 +1,70 @@
 <?php
-?>
+$pdo = new PDO(
+    'mysql:host=' . '127.0.0.1' .
+    ';dbname=' . 'catcafe',
+    'root',
+    'root'
+);
 
+
+$produtoList = $pdo->query('SELECT * FROM produto;')->fetchAll(PDO::FETCH_ASSOC);
+print_r($produtoList);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="css\img\img1-sem-fundo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css\reset.css">
-
-    <link rel="stylesheet" href="css\index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>Sua Cafeteria</title>
+    <title>Café</title>
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
     <main>
-        <header class="cabecalho">
-            <div class="container-img-logo">
-                <a href="">
-                    <img src="css\img\img1-sem-fundo.png" class="logo" alt="logo-cafe">
-                </a>
+        <header>
+            <div class="header-container">
+                <h1 id="titulo-header">Café Catalogo</h1>
+                <a id="link-header">Adicionar Produto</a>
             </div>
-            <h2>Sua Cafeteria</h2>
-            <a href="">Sair</a>
+            <a class="button-login">Sair</a>
         </header>
-        <div class="banner">
-            <img src="css\img\img2-sem-fundo.png" alt="">
-        </div>
-        <section class="container-cafe-manha">
-            <div class="container-cafe-manha-titulo">
-                <h3 id="titulo">~~Opções para o Café~~</h3>
-            </div>
-            <div class="container-cafe-manha-produtos">
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\cafe.jpg">
-                    </div>
-                    <p>Cafe Preto</p>
-                    <p>Cafe preto tradicional brasileiro</p>
-                    <p>R$ 3,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\cafe-decor.jpg">
-                    </div>
-                    <p>Cafe Decorado</p>
-                    <p>Seu cafe com leite mais bonito</p>
-                    <p>R$ 7,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\cafe-chocolate.webp">
-                    </div>
-                    <p>Cafe com Chocolate</p>
-                    <p>Para os fas de chocolate a melhor combinacao</p>
-                    <p>R$ 9,00</p>
-                </div>
-            </div>
-        </section>
-        <section class="container-almoco">
-            <div class="container-almoco-titulo">
-                <h3 id="titulo">~~Opções para o Almoco~~</h3>
-            </div>
-            <div class="container-almoco-produtos">
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\feijoada.jpeg">
-                    </div>
-                    <p>Feijoada</p>
-                    <p>O gosto brasileiro</p>
-                    <p>R$ 25,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\file-de-frango-grelhado.jpeg">
-                    </div>
-                    <p>File de Frango</p>
-                    <p>File de Frango grelhado</p>
-                    <p>R$ 20,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\peixe.webp">
-                    </div>
-                    <p>Peixe</p>
-                    <p>Peixe frito</p>
-                    <p>R$ 22,00</p>
-                </div>
-            </div>
+        <label class="title-index">Lista de Produtos</label>
+        <section>
+            <div class="container-cafe">
+                <?php foreach ($produtoList as $produto) { ?>
 
-        </section>
-        <section class="container-bebidas">
-            <div class="container-bebidas-titulo">
-                <h3 id="titulo">~~Opções para Beber~~</h3>
-            </div>
-            <div class="container-bebidas-produtos">
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\suco.avif">
-                    </div>
-                    <p>Suco Laranja</p>
-                    <p>Suco no copo 500ml</p>
-                    <p>R$ 8,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\coca.jpg">
-                    </div>
-                    <p>Coca-Cola</p>
-                    <p>Coca Lata</p>
-                    <p>R$ 6,00</p>
-                </div>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="css\img\cerveja.jpg">
-                    </div>
-                    <p>Cerveja</p>
-                    <p>Heineken 600</p>
-                    <p>R$ 13,00</p>
-                </div>
-            </div>
+                    <div class="container-produto">
+                        <div class="container-foto">
+                            <img src="css\img\cafe-chocolate.webp">
+                        </div>
+                        <div class="texto-produto">
+                            <p class="titulo-produto"><?= $produto['nome']; ?> </p>
+                            <p class="descricao-produto"><?= $produto['Descricao']; ?> </p>
+                        </div>
+                        <div class="container-setins">
+                            <p class="preco-produto"> R$ <?= number_format($produto['Preco'], 2, ',', '.'); ?> </p>
+                            <div class="setins"><a class="icon-edit"><i class="bi bi-pencil-square"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                            <path fill-rule="evenodd"
+                                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                        </svg></i></a>
+                                <a class="icon-edit"><i class="bi bi-trash-fill"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                        </svg></i></a>
+                            </div>
+                        </div>
 
+                    </div>
+                <?php } ?>
+
+            </div>
         </section>
     </main>
 </body>
