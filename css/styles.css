@@ -114,6 +114,12 @@ img {
     background-color: #402D1D;
     color: white;
     border-radius: 10px;
+    text-decoration: none;
+}
+
+.icon-edit{
+    text-decoration: none;
+    color: black;
 }
 
 .button-login {
