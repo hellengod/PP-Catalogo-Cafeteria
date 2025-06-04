@@ -7,9 +7,9 @@ $PDO = new PDO(
     'root'
 );
 
-$name = $_POST['name'];
-$descricao = $_POST['descricao'];
-$preco = $_POST['preco'];
+$name = filter_input(INPUT_POST, 'name');
+$descricao = filter_input(INPUT_POST, 'descricao');
+$preco = filter_input(INPUT_POST, 'preco');
 
 $sql = 'INSERT INTO produto (nome, Descricao, Preco) VALUES (?,?,?)';
 $stmt = $PDO->prepare($sql);
