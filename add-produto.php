@@ -40,14 +40,12 @@ if ($id !== null && $id !== false) {
             <div class="header-container">
                 <h1 id="titulo-header">Café Catalogo</h1>
             </div>
-            <a class="button-login" href="index.php">Voltar</a>
+            <a class="button-login" href="/">Voltar</a>
         </header>
 
         <section class="form-section">
             <div class="form">
-                <form class="input-form"
-                    action="<?= $id !== null && $id !== false ? '/editar-produto.php?id=' . $id  : '/novo-produto.php'; ?>"
-                    method="post">
+                <form class="input-form" method="post">
                     <div class="input-container">
                         <h2 class="titulo-form">Adicionar Produto</h2>
 
