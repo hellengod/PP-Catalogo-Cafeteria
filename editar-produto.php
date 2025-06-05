@@ -10,25 +10,25 @@ $PDO = new PDO(
 
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if ($id === null && $id === false) {
-    header('Location: /index.php?sucesso=0');
+    header('Location: /?sucesso=0');
     exit();
 }
 
 $name = filter_input(INPUT_POST, 'name');
 if ($name === null && $name === false) {
-    header('Location: /index.php?sucesso=0');
+    header('Location: /?sucesso=0');
     exit();
 }
 
 $descricao = filter_input(INPUT_POST, 'descricao');
 if ($descricao === null && $descricao === false) {
-    header('Location: /index.php?sucesso=0');
+    header('Location: /?sucesso=0');
     exit();
 }
 
 $preco = filter_input(INPUT_POST, 'preco');
 if ($preco === null && $preco === false) {
-    header('Location: /index.php?sucesso=0');
+    header('Location: /?sucesso=0');
     exit();
 }
 
@@ -42,7 +42,7 @@ $stmt->bindValue(':preco', $preco);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT); 
 
 if ($stmt->execute() === false) {
-    header('Location: /index.php?sucesso=0');
+    header('Location: /?sucesso=0');
 } else {
-    header('Location: /index.php?sucesso=1');
+    header('Location: /?sucesso=1');
 }
