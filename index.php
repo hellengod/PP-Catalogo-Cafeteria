@@ -43,7 +43,7 @@ $produtoList = $pdo->query('SELECT * FROM produto;')->fetchAll(PDO::FETCH_ASSOC)
                         </div>
                         <div class="container-setins">
                             <p class="preco-produto"> R$ <?= number_format($produto['Preco'], 2, ',', '.'); ?> </p>
-                            <div class="setins"><a class="icon-edit"><i class="bi bi-pencil-square"><svg
+                            <div class="setins"><a class="icon-edit"  href="add-produto.php?id=<?= $produto['id_produto'] ?>" ><i class="bi bi-pencil-square"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                             class="bi bi-pencil-square" viewBox="0 0 16 16">
                                             <path

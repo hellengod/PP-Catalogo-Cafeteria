@@ -1,3 +1,29 @@
+<?php
+
+$pdo = new PDO(
+    'mysql:host=' . '127.0.0.1' .
+    ';dbname=' . 'catcafe',
+    'root',
+    'root'
+);
+
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+$produto = [
+    'nome' => '',
+    'Descricao' => '',
+    'Preco' => '',
+];
+
+if ($id !== null && $id !== false) {
+    $stmt = $pdo->prepare('SELECT * FROM produto WHERE id_produto = ?;');
+    $stmt->bindValue(1, $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,26 +40,29 @@
             <div class="header-container">
                 <h1 id="titulo-header">Café Catalogo</h1>
             </div>
-            <a class="button-login">Sair</a>
+            <a class="button-login" href="index.php">Voltar</a>
         </header>
 
-        <section class="form-section">  
+        <section class="form-section">
             <div class="form">
-                <form class="input-form" action="/novo-produto.php" method="post">
+                <form class="input-form"
+                    action="<?= $id !== null && $id !== false ? '/editar-produto.php?id=' . $id  : '/novo-produto.php'; ?>"
+                    method="post">
                     <div class="input-container">
                         <h2 class="titulo-form">Adicionar Produto</h2>
 
                         <div class="input-name">
                             <label class="label-form-nome" for="name">Nome</label>
-                            <input name="name" class="input-form-nome" type="text">
+                            <input value="<?= $produto['nome'] ?>" name="name" class="input-form-nome" type="text">
                         </div>
                         <div class="input-desc">
                             <label class="label-form-desc" for="image">Descricao</label>
-                            <input class="input-form-desc" name="descricao" type="text">
+                            <input value="<?= $produto['Descricao'] ?>" class="input-form-desc" name="descricao"
+                                type="text">
                         </div>
                         <div class="input-preco">
                             <label class="label-form-preco" for="preco">Preco</label>
-                            <input name="preco" class="input-form-preco" type="text">
+                            <input value="<?= $produto['Preco'] ?>" name="preco" class="input-form-preco" type="text">
                         </div>
                         <div class="input-img">
                             <label class="label-form-img" for="image">Imagem:</label>

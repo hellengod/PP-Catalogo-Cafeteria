@@ -136,6 +136,7 @@ img {
     font-weight: 800;
     align-self: flex-start;
     margin-top: 40px;
+    text-decoration: none;
 }
 
 .button-cadastro {

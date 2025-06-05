@@ -8,7 +8,7 @@ $PDO = new PDO(
 );
 
 
-$id = $_GET['id'];
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 $sql = 'DELETE FROM produto WHERE id_produto = ?';
 
 $stmt = $PDO->prepare($sql);
